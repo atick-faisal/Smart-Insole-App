@@ -5,9 +5,14 @@ from typing import Callable
 from numpy.typing import NDArray
 
 
-BACKGROUND_COLOR = "#1e1e2e"
-SURFACE_COLOR = "#313244"
-FOREGROUND_COLOR = "#cdd6f4"
+# BACKGROUND_COLOR = "#1e1e2e"
+# SURFACE_COLOR = "#313244"
+# FOREGROUND_COLOR = "#cdd6f4"
+# ACCENT_COLOR = "#f38ba8"
+
+BACKGROUND_COLOR = "#ffffff"
+SURFACE_COLOR = "#ffffff"
+FOREGROUND_COLOR = "#212121"
 ACCENT_COLOR = "#f38ba8"
 
 ENTRY_WIDTH = 24
@@ -22,7 +27,7 @@ class App(tk.Tk):
         # save_thermogram: callable
     ):
         super().__init__()
-        self.title("IR THERMOGRAM")
+        self.title("SMART INSOLE")
         self.configure(bg=BACKGROUND_COLOR)
         # self.save_thermogram = save_thermogram
         # self.geometry('300x50')
@@ -32,7 +37,7 @@ class App(tk.Tk):
             bg=BACKGROUND_COLOR,
             font=(None, 20),
             fg=FOREGROUND_COLOR,
-            text="IR THERMOGRAM"
+            text="SMART INSOLE"
         )
         self.header.grid(row=3, column=0)
 

@@ -26,7 +26,8 @@ class UiState(Thread):
         self.daemon = True
 
     def run(self) -> None:
-        while self.data_source.isOpen():
+        # while self.data_source.isOpen():
+        while True:
             self.data = get_serial_data(self.data_source)
             if self.data != None:
                 self.thermogram = Thermogram.generate_thermogram(self.data)

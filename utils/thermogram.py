@@ -112,8 +112,8 @@ class Thermogram(object):
 
         KNN.fit(TRAIN_X, temperature)
         thermogram = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
-        thermogram[X2, X1, :] = cm.jet(KNN.predict(TEST_X))[:, :-1] * 255
+        thermogram[X2, X1, :] = cm.YlOrBr(KNN.predict(TEST_X))[:, :-1] * 255
         thermogram = cv2.GaussianBlur(thermogram, (BLUR_SIZE, BLUR_SIZE), 0)
-        thermogram[MASK, :] = 0
+        thermogram[MASK, :] = 255
 
         return thermogram
