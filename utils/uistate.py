@@ -20,7 +20,7 @@ class UiState(Thread):
         super().__init__()
         self.data_source = data_source
         self.on_temperature_change = on_temperature_change
-        self.data = [27.0] * 50
+        self.data = [0.0] * 32
         self.thermogram = Thermogram.generate_thermogram(self.data)
         self.record = False
         self.daemon = True
